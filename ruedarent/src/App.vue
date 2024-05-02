@@ -20,6 +20,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/PlansOwner">Plans Owner</RouterLink>
         <RouterLink to="/OrderOwner">Order Owner</RouterLink>
         <RouterLink to="/register">Register</RouterLink>
+        <RouterLink to="VehicleRegisterOwner">Vehicle Register Owner</RouterLink>
       </nav>
     </div>
 
