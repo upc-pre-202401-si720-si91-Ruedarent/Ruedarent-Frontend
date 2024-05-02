@@ -50,6 +50,11 @@ const router = createRouter({
       path: '/MyOwnerProfile',
       name: 'MyOwnerProfile',
         component: () => import('../views/OwnerProfileView.vue')
+    },
+    {
+      path: '/PlansOwner',
+      name: 'PlansOwner',
+        component: () => import('../views/PlansOwnerView.vue')
     }
   ]
 })
