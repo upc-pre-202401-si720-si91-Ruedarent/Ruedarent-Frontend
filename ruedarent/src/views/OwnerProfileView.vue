@@ -158,7 +158,7 @@ export default {
 }
 
 .container{
-  background-color: red;
+
 
 
   margin-top: 5rem;
