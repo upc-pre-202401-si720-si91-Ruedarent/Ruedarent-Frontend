@@ -1,5 +1,5 @@
 <script>
-import profileImage from "@/assets/bike2.jpeg";
+import profileImage from "@/assets/bikeicon.png";
 
 export default {
   name: "VehicleRegisterOwnerView",
@@ -32,53 +32,62 @@ export default {
 </header>
 
 
-<div class="container">
-  <pv-card>
-    <template #content>
-    <div class="containercard">
+  <div class="container">
+    <pv-card>
+      <template #content>
+        <div class="containercard">
 
-      <div class="profileImage">
-        <pv-image class="profileImage" :src="profileImage"  alt="Profile Image" width="420" height="350" preview />
-      </div>
+          <div class="profileImage">
+            <pv-image class="profileImage" :src="profileImage"  alt="Profile Image" width="350" preview />
+          </div>
 
-      <div class="profiledescription">
-        <div class="titleinformation">
-          <h1 >Mi Vehiculo</h1>
+
+
+
+
+
+
+
+          <div class="profiledescriptionv2">
+            <div class="titleinformation">
+              <h1 >Mi Vehículo</h1>
+            </div>
+
+            <div class="contenedor">
+              <div class="containerinformation">
+                <h3>Tipo:</h3>
+                <h3>Marca:</h3>
+                <h3>Estado:</h3>
+                <h3>Color:</h3>
+
+                <h3>Telefono:</h3>
+
+              </div>
+
+              <div class="containerinformationv2">
+                <h3>Ingresar informacion</h3>
+                <h3>Ingresar informacion</h3>
+                <h3>Ingresar informacion</h3>
+                <h3>Ingresar informacion</h3>
+                <h3>Ingresar informacion</h3>
+
+              </div>
+
+            </div>
+
+
+            <div >
+              <pv-button class="buttonprofile" label="Editar Perfil" />
+            </div>
+          </div>
         </div>
-
-        <div class="containerinformation">
-          <h3>Tipo:</h3>
-          <h3>Marca:</h3>
-          <h3>Estado:</h3>
-          <h3>Color:</h3>
-          <h3>Telefono:</h3>
-
-        </div>
-
-      </div>
-
-      <div class="profiledescriptionv2">
-        <div class="containerinformationv2">
-          <h3>Ingresar informacion</h3>
-          <h3>Ingresar informacion</h3>
-          <h3>Ingresar informacion</h3>
-          <h3>Ingresar informacion</h3>
-          <h3>Ingresar informacion</h3>
-
-        </div>
-
-        <div >
-          <pv-button class="buttonprofile" label="Registrar" />
-        </div>
-      </div>
-    </div>
-  </template>
+      </template>
 
 
-</pv-card>
+    </pv-card>
 
 
-</div>
+  </div>
 
 
 
@@ -87,9 +96,14 @@ export default {
 
 <style scoped>
 
+.contenedor{
+  display:grid;
+  grid-template-columns: 0.5fr 1fr; /* Define columns */
+}
 
-  .menubar {
-    margin-top: 2rem;
+
+.menubar {
+  margin-top: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
   display: grid;
@@ -102,16 +116,16 @@ export default {
   overflow-x: auto; /* Enable horizontal scrollbar if content overflows */
 }
 
-  .ruedarenticon,
-  .profileicon {
-    grid-column: 1;
+.ruedarenticon,
+.profileicon {
+  grid-column: 1;
 }
 
-  .buttonheader,
-  .buttonsession {
-    grid-column: 2;
+.buttonheader,
+.buttonsession {
+  grid-column: 2;
 }
-  .ruedarenticon{
+.ruedarenticon{
   width: 4rem;
   height: 4rem;
 
@@ -119,7 +133,7 @@ export default {
   margin-left: 1rem;
 }
 
-  .profileicon{
+.profileicon{
   width: 2rem;
   height: 2rem;
   margin-right: 0.3rem;
@@ -129,8 +143,8 @@ export default {
 }
 
 
-  .buttonheader{
-    margin-right: 1rem;
+.buttonheader{
+  margin-right: 1rem;
   margin-left: 1rem;
   background-color: #D9D9D9;
   color: black;
@@ -140,8 +154,8 @@ export default {
   padding: 0.5rem 4rem 1.5rem 1rem;
 }
 
-  .buttonsession{
-    margin-right: 1rem;
+.buttonsession{
+  margin-right: 1rem;
 
   background-color: #D9D9D9;
   color: black;
@@ -150,44 +164,46 @@ export default {
   padding: 0.5rem 1rem 1.5rem 0;
 }
 
-  .inputbutton{
+.inputbutton{
   padding: 0.5rem;
 }
 
-  .container{
+.container{
 
-
-
-    margin-top: 5rem;
-  margin-left:12rem;
-  margin-right: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* Ajusta este valor según sea necesario */
+  margin: 0;
+  padding: 0;
 }
 
-  .containercard{
+.containercard{
   display: grid;
-  grid-template-columns: 0.8fr 0.5fr 1fr; /* Define columns */
+  grid-template-columns: 1fr 1fr ; /* Define columns */
 }
 
-  .profileImage{
+.profileImage{
 
-  border-radius: 68px;
+
   grid-column: 1 / span 1;
 
   width:100%
 
 }
 
-  .profiledescription {
-    grid-column: 2 / span 1;
-
+.profiledescription {
+  grid-column: 2 ;
+  background-color:red;
   width: 100%;
+  height:20%;
 }
 
-  .containerinformation{
+.containerinformation{
 
   width: 70%;
-  margin-top: 3.1rem;
-  margin-left: 2rem;
+
+  margin-left: 3rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 0.7rem;
@@ -199,29 +215,35 @@ export default {
 
 }
 
-  .containerinformation h3{
+.containerinformation h3{
   color: black;
 }
 
-  .titleinformation{
-    margin-left: 0.1rem;
+.titleinformation{
+
+  margin-left: 3rem;
   margin-top: 0.5rem;
+  text-align: right;
+  display:flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
 
 }
 
-  .titleinformation h1{
+.titleinformation h1{
   color: black;
-}
-
-  .profiledescriptionv2{
-
 
 }
 
-  .containerinformationv2{
+.profiledescriptionv2{
 
-    min-height: 50px;
-  margin-top:6.8rem;
+  grid-column: 2;
+
+
+}
+
+.containerinformationv2{
 
   border: 2px solid;
   border-radius: 1.5rem;
@@ -230,15 +252,16 @@ export default {
   padding-bottom: 0.5rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
+  margin-left: 0.4rem;
+
 }
 
-  .containerinformationv2 h3{
+.containerinformationv2 h3{
   color:black;
-
 }
 
-  .buttonprofile{
-    margin-top: 1rem;
+.buttonprofile{
+  margin-top: 1rem;
   margin-left: 3rem;
   background-color: #454545;
   color: white;

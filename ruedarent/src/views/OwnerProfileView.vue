@@ -47,28 +47,36 @@ export default {
             <pv-image class="profileImage" :src="profileImage"  alt="Profile Image" width="350" preview />
           </div>
 
-          <div class="profiledescription">
+
+
+
+
+
+
+
+          <div class="profiledescriptionv2">
             <div class="titleinformation">
               <h1 >Mi Perfil</h1>
             </div>
 
-            <div class="containerinformation">
-              <h3>Nombre:</h3>
-              <h3>Vehiculos:</h3>
-              <h3>Ubicacion:</h3>
-              <h3>Telefono:</h3>
+            <div class="contenedor">
+              <div class="containerinformation">
+                <h3>Nombre:</h3>
+                <h3>Vehiculos:</h3>
+                <h3>Ubicacion:</h3>
+                <h3>Telefono:</h3>
+
+              </div>
+
+              <div class="containerinformationv2">
+                <h3>Ingresar informacion</h3>
+                <h3>Ingresar informacion</h3>
+                <h3>Ingresar informacion</h3>
+                <h3>Ingresar informacion</h3>
+              </div>
 
             </div>
 
-          </div>
-
-          <div class="profiledescriptionv2">
-            <div class="containerinformationv2">
-              <h3>Ingresar informacion</h3>
-              <h3>Ingresar informacion</h3>
-              <h3>Ingresar informacion</h3>
-              <h3>Ingresar informacion</h3>
-            </div>
 
             <div >
               <pv-button class="buttonprofile" label="Editar Perfil" />
@@ -89,6 +97,11 @@ export default {
 </template>
 
 <style scoped>
+
+.contenedor{
+  display:grid;
+  grid-template-columns: 0.5fr 1fr; /* Define columns */
+}
 
 
 .menubar {
@@ -159,37 +172,39 @@ export default {
 
 .container{
 
-
-
-  margin-top: 5rem;
-  margin-left:10rem;
-  margin-right: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* Ajusta este valor según sea necesario */
+  margin: 0;
+  padding: 0;
 }
 
 .containercard{
   display: grid;
-  grid-template-columns: 0.8fr 0.5fr 1fr; /* Define columns */
+  grid-template-columns: 1fr 1fr ; /* Define columns */
 }
 
 .profileImage{
-  margin-left:3rem;
-  border-radius: 68px;
+
+
   grid-column: 1 / span 1;
 
-  width:88%
+  width:100%
 
 }
 
 .profiledescription {
-  grid-column: 2 / span 1;
-
+  grid-column: 2 ;
+background-color:red;
   width: 100%;
+  height:20%;
 }
 
 .containerinformation{
 
   width: 70%;
-  margin-top: 3rem;
+
   margin-left: 3rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -207,24 +222,30 @@ export default {
 }
 
 .titleinformation{
+
   margin-left: 3rem;
   margin-top: 0.5rem;
+  text-align: right;
+  display:flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
 
 }
 
 .titleinformation h1{
   color: black;
+
 }
 
 .profiledescriptionv2{
+
+  grid-column: 2;
 
 
 }
 
 .containerinformationv2{
-
-  min-height: 50px;
-  margin-top:6.8rem;
 
   border: 2px solid;
   border-radius: 1.5rem;
@@ -233,11 +254,11 @@ export default {
   padding-bottom: 0.5rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
+
 }
 
 .containerinformationv2 h3{
   color:black;
-
 }
 
 .buttonprofile{
