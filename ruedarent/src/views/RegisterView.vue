@@ -10,14 +10,37 @@
     </div>
     <form class="form">
       <div class="form__group">
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="john@email.com" />
+        <div class="form__group__top">
+          <input id="name" type="text" placeholder="Nombres" />
+          <input id="lastName" type="text" placeholder="Apellidos" />
+        </div>
+        <div class="form__group__bot">
+          <input id="email" type="email" placeholder="Correo electronico" />
+        </div>
       </div>
       <div class="form__group">
-        <label for="password">Password</label>
-        <input type="password" placeholder="*********" />
+        <div class="form__group__top">
+          <input id="password" type="password" placeholder="Contraseña" />
+          <input id="passwordConfirm" type="password" placeholder="Confirmación" />
+        </div>
+        <div class="form__group__bot">
+          <input id="dob" type="date" placeholder="Fecha de nacimiento" />
+          <label>DD/MM/AAAA</label>
+        </div>
       </div>
-      <button type="submit">Login</button>
+      <div class="form__group">
+        <div class="form__group__top">
+         <div class="gender-select">
+          <input type="radio" id="male" />
+          <label for="male" id="male">Male</label>
+         </div>
+         <div class="gender-select">
+          <input type="radio" id="female" />
+          <label for="female" id="female">Female</label>
+         </div>
+        </div>
+      </div>
+      <button type="submit">Crear Cuenta</button>
     </form>
    <span>
     ¿Tienes cuenta? <a href="/login">Inicia Sesión</a>
@@ -50,14 +73,35 @@
   .form {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
     padding: 1rem;
     width: 420px;
   }
 
   .form__group {
     display: flex;
-    gap: .2rem;
+    gap: .8rem;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form__group__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form__group__top:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .form__group__bot {
+    display: flex;
+    gap: .8rem;
     flex-direction: column;
   }
 
@@ -76,6 +120,11 @@
     cursor: pointer;
     background-color: #34D399;
     color: white;
+  }
+
+  .form__group__bot label {
+    font-size: small;
+    text-decoration: underline;
   }
 
   button:hover {
