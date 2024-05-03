@@ -4,6 +4,7 @@ import profileImage from "@/assets/vehicleimage.png";
 export default {
   name: "RentVehicleView",
   data() {
+
     return {
       checked: false,
       profileImage
