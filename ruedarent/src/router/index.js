@@ -34,6 +34,14 @@ const router = createRouter({
       component: () => import('../views/RegisterView.vue')
     },
     {
+      path: '/Recommendations',
+      name: 'Recommendations',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/RecommendationsView.vue')
+    },
+    {
       path: '/myProfile',
       name: 'myProfile',
       // route level code-splitting
@@ -47,24 +55,32 @@ const router = createRouter({
       component: () => import('../views/VehiclesView.vue')
     },
     {
+      path: '/RentVehicle',
+      name: 'RentVehicle',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/RentVehicleView.vue')
+    },
+    {
       path: '/MyOwnerProfile',
       name: 'MyOwnerProfile',
-        component: () => import('../views/OwnerProfileView.vue')
+      component: () => import('../views/OwnerProfileView.vue')
     },
     {
       path: '/PlansOwner',
       name: 'PlansOwner',
-        component: () => import('../views/PlansOwnerView.vue')
+      component: () => import('../views/PlansOwnerView.vue')
     },
     {
       path:'/OrderOwner',
-        name:'OrderOwner',
-        component: () => import('../views/OrderOwnerView.vue')
+      name:'OrderOwner',
+      component: () => import('../views/OrderOwnerView.vue')
     },
     {
       path:'/VehicleRegisterOwner',
       name:'VehicleRegisterOwner',
-        component: () => import('../views/VehicleRegisterOwnerView.vue')
+      component: () => import('../views/VehicleRegisterOwnerView.vue')
     }
   ]
 })
