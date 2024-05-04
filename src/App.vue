@@ -23,65 +23,40 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+  background-color: #D9D9D9;
+  overflow: hidden;
+  border-radius: 50px;
+  font-size: 0.99rem;
 }
 
 nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
 }
 
-nav a:first-of-type {
-  border: 0;
+nav a:hover {
+  background-color: #a5bdabcb;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
+/* Estilos para el menú responsive */
+@media screen and (max-width: 600px) {
+  nav a {
+    float: none;
+    display: block;
     text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+    text-align: center;
   }
 }
 </style>

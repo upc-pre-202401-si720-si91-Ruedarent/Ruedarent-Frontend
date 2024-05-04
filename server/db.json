@@ -6,7 +6,8 @@
             "marca": "Dualtron",
             "modelo": "Dolphin",
             "caracteristicas": "Económico, nuevo, eléctrico.",
-            "image": ""
+            "image": "https://i.ibb.co/jZ4dBdT/image.png",
+            "published": true
         },
         {
             "id": 2,
@@ -14,7 +15,8 @@
             "marca": "Kingsong",
             "modelo": "N15 Pro",
             "caracteristicas": "Económico, nuevo, eléctrico.",
-            "image": ""
+            "image": "https://i.ibb.co/C5G2hXP/image.png",
+            "published": true
         },
         {
             "id": 3,
@@ -22,7 +24,8 @@
             "marca": "Ninebot",
             "modelo": "E2 Plus",
             "caracteristicas": "Económico, nuevo, eléctrico.",
-            "image": ""
+            "image": "",
+            "published": true
         },
         {
             "id": 4,
@@ -30,7 +33,8 @@
             "marca": "Vsett",
             "modelo": "Mini Green",
             "caracteristicas": "Popular, nuevo, eléctrico.",
-            "image": ""
+            "image": "",
+            "published": true
         },
         {
             "id": 5,
@@ -38,7 +42,8 @@
             "marca": "Generico",
             "modelo": "Mini",
             "caracteristicas": "Popular, nuevo, eléctrico.",
-            "image": ""
+            "image": "",
+            "published": true
         },
         {
             "id": 6,
@@ -46,7 +51,8 @@
             "marca": "Cycool",
             "modelo": "E-Bike",
             "caracteristicas": "Económico, nuevo.",
-            "image": ""
+            "image": "https://i.ibb.co/7z1VtND/image.png",
+            "published": true
         },
         {
             "id": 7,
@@ -54,7 +60,8 @@
             "marca": "Onebot",
             "modelo": "Plegable",
             "caracteristicas": "Económico, nuevo, Plegable.",
-            "image": ""
+            "image": "",
+            "published": true
         },
         {
             "id": 8,
@@ -62,7 +69,8 @@
             "marca": "SMRLO",
             "modelo": "YK-EB009",
             "caracteristicas": "Económico, nuevo, Plegable.",
-            "image": ""
+            "image": "",
+            "published": true
         },
         {
             "id": 9,
@@ -70,16 +78,18 @@
             "marca": "Best",
             "modelo": "BMX",
             "caracteristicas": "Popular, nuevo.",
-            "image": ""
+            "image": "",
+            "published": true
         },
         
         {
             "id": 10,
-            "tipo": "Bicicleta",
+            "tipo": "Monopatin",
             "marca": "JEEP",
-            "modelo": "Montañera",
+            "modelo": "XXXX",
             "caracteristicas": "Económica, nuevo.",
-            "image": ""
+            "image": "https://i.ibb.co/fDWbxv6/image.png",
+            "published": true
         }
     ],
     "usuarios": [
@@ -89,7 +99,8 @@
             "descripcion": "Busco vehículos electricos para ayudar al medio ambiente",
             "ubicación": "AV. Los Proceres 757, VMT",
             "telefono": "654321987",
-            "Vehículos": "Scooters, Bicicletas y Monopatines"
+            "Vehículos": "Scooters, Bicicletas y Monopatines",
+            "published": true
         },
         {
             "id": 12,
@@ -97,7 +108,8 @@
             "descripcion": "Busco vehículos electricos para ayudar al medio ambiente",
             "ubicación": "C. Don Diego de Noche 376, Surco 15023",
             "telefono": "999947369",
-            "Vehículos": "Scooters, Bicicletas y Monopatines"
+            "Vehículos": "Scooters, Bicicletas y Monopatines",
+            "published": true
         },
         {
             "id": 12,
@@ -105,7 +117,8 @@
             "descripcion": "Busco vehículos electricos para ayudar al medio ambiente",
             "ubicación": "Jr. Andahuaylas 1138, Lima 15033",
             "telefono": "990609365",
-            "Vehículos": "Scooters y Bicicletas"
+            "Vehículos": "Scooters y Bicicletas",
+            "published": true
         }
     ],
     "planes": [
@@ -114,21 +127,24 @@
             "nombre": "Plan Gratuito",
             "duracion": "30 días",
             "precio": "Gratis",
-            "vehiculos_disponibles": 3
+            "vehiculos_disponibles": 3,
+            "published": true
         },
         {
             "id": 14,
             "nombre": "Plan Standard",
             "duracion": "30 días",
             "precio": "S/. 10.00",
-            "vehiculos_disponibles": 50
+            "vehiculos_disponibles": 50,
+            "published": true
         },
         {
             "id": 15,
             "nombre": "Plan Entusiasta",
             "duracion": "N/A",
             "precio": "S/. 25.00",
-            "vehiculos_disponibles": "Ilimitado"
+            "vehiculos_disponibles": "Ilimitado",
+            "published": true
         }
     ]
 }
