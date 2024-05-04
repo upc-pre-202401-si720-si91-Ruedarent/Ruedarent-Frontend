@@ -86,7 +86,13 @@ const router = createRouter({
       path:'/UserFilterView',
       name:'UserFilterView',
         component: () => import('../views/UserFilterView.vue')
+    },
+    {
+      path: '/header',
+      name: 'header',
+      component: () => import('../components/headerView.vue')
     }
+
   ]
 })
 

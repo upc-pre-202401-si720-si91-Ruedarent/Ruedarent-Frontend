@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <header>
+  <!--<header>
     <pv-menubar class="menubar">
       <template #start>
         <img class="ruedarenticon" src="../assets/ruedarenticon.png" alt="RuedaRent Logo" />
@@ -31,6 +31,7 @@ export default {
       </template>
     </pv-menubar>
   </header>
+  -->
 
   <div class="containerplans">
 

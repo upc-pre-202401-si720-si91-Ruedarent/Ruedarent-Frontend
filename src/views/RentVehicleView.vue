@@ -14,6 +14,8 @@ export default {
 </script>
 
 <template>
+
+
   <header>
     <pv-menubar class="menubar">
       <template #start>
@@ -32,6 +34,8 @@ export default {
       </template>
     </pv-menubar>
   </header>
+
+
 
   <div class="container">
 
