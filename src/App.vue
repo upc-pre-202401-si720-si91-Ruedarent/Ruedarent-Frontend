@@ -15,8 +15,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/OwnerProfileView">Perfil Propietario</RouterLink>
         <RouterLink to="/PlansOwner">Plans Owner</RouterLink>
         <RouterLink to="/OrderOwner">Order Owner</RouterLink>
-        <RouterLink to="/VehicleRegisterOwner">Propietarios: Registro vehículos</RouterLink>
-        <RouterLink to="/OwnerViewVehicles">Propietarios: Ver vehículos</RouterLink>
+        <RouterLink to="/VehicleRegisterOwner">Owner: Registro vehículos</RouterLink>
+        <RouterLink to="/OwnerViewVehicles">Owner: Ver vehículos</RouterLink>
       </nav>
     </div>
   </header>
@@ -25,7 +25,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 .wrapper {
-  max-width: 1400px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -42,7 +42,7 @@ nav a {
   display: block;
   color: #000;
   text-align: center;
-  padding: 14px 20px;
+  padding: 30px 25px;
   text-decoration: none;
   text-align: center;
 }

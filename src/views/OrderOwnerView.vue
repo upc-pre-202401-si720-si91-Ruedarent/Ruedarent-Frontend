@@ -13,24 +13,6 @@ export default {
 </script>
 
 <template>
-  <header>
-    <pv-menubar class="menubar">
-      <template #start>
-        <img class="ruedarenticon" src="../assets/ruedarenticon.png" alt="RuedaRent Logo" />
-        <pv-button class="buttonheader" label="Recomendaciones"/>
-        <pv-button class="buttonheader" label="Mi Perfil"/>
-        <pv-button class="buttonheader" label="Planes"/>
-        <pv-button class="buttonheader" label="Mis Vehiculos"/>
-        <img class="profileicon" src="../assets/profileicon.png" alt="Profile Icon" />
-        <pv-button class="buttonsession" label="Cerrar Sesion"/>
-      </template>
-
-
-      <template #end>
-        <pv-inputswitch class="inputbutton" v-model="checked" />
-      </template>
-    </pv-menubar>
-  </header>
 
   <div class="containerplans">
 

@@ -1,37 +1,38 @@
-<template>
+<script>
+  import { obtenerUsuarios } from '@/shared/services/http-common.js';
+  
+  export default {
+    data() {
+      return {
+        usuarios: []
+      };
+    },
+    async created() {   
+      this.usuarios = await obtenerUsuarios();
+    }
+  };
 
+</script>
+<template>
   <div class="contenedor">
-    <div class="imagen">
+    <div v-if="usuarios.length > 0" class="imagen">
       <img src="https://i.ibb.co/Wcqs4b5/image.png" alt="Tu nombre">
     </div>
     <div class="contenedor2">
         <h1>Mi Perfil</h1>
         <div class="margen">
-          <div>
-            <h4>Nombre:</h4>
+          <div v-if="usuarios.length > 0">
+            <h4>Nombre: </h4>
             <h4>Vehículos:</h4>
             <h4>Ubicación:</h4>
-            <h4>Teléfono:</h4>
+            <h4>Teléfono: </h4>
           </div>
-          <ul>
-            <li>
-              <label for="nombre"></label>
-              <input type="text" id="nombre" name="nombre" value="">
-            </li>
-            <li>
-              <label for="vehiculos"></label>
-              <input type="text" id="vehiculos" name="vehiculos" value="">
-            </li>
-            <li>
-              <label for="ubicacion"></label>
-              <input type="text" id="ubicacion" name="ubicacion" value="">
-            </li>
-            <li>
-              <label for="telefono"></label>
-              <input type="tel" id="telefono" name="telefono" value="">
-            </li>
-              <button type="submit">Ver más</button>
-          </ul>
+          <div v-if="usuarios.length > 0" class="lista">
+            <p>{{ usuarios[0].nombre }}</p>
+            <p>{{ usuarios[0].Vehículos }}</p>
+            <p>{{ usuarios[0].ubicación }}</p>
+            <p>{{ usuarios[0].telefono }}</p>
+          </div>
         </div>
     </div>
   </div>
@@ -71,12 +72,12 @@ img {
   display: flex;
 }
 
-.margen ul {
+.margen .lista{
   list-style: none;
-  margin-top: 20px;
+  margin-top: 8px;
 }
 
-.margen ul li {
+.margen p {
   margin-bottom: 21px;
 }
 

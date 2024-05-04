@@ -1,40 +1,33 @@
+<script>
+import { obtenerVehiculos } from '@/shared/services/http-common.js'; // Corregir el nombre del archivo y eliminar espacios adicionales
+  
+  export default {
+    data() {
+      return {
+        vehicles: [] 
+      };
+    },
+    async created() {
+   
+      this.vehicles = await obtenerVehiculos();
+    }
+  };
+</script>
+
 <template>
     <div class="container">
-    <h1>Vehiculos</h1>
-
-    <div class="cards">
-        <div class="card" data-categoria="scooter">
-            <img src="https://i.ibb.co/jZ4dBdT/image.png" alt="Scooter">
-            <h2>Scooter Eléctrico</h2>
-            <p>Económico, nuevo, eléctrico.</p>
+      <h1>Vehículos</h1>
+  
+      <div class="cards">
+        <!-- Iterar sobre los vehículos obtenidos de la API -->
+        <div class="card" v-for="vehicle in vehicles" :key="vehicle.id">
+          <img :src="vehicle.image" :alt="vehicle.tipo">
+          <h2>{{ vehicle.tipo }}</h2>
+          <p>{{ vehicle.caracteristicas }}</p>
         </div>
-        <div class="card" data-categoria="scooter">
-            <img src="https://i.ibb.co/C5G2hXP/image.png" alt="Scooter">
-            <h2>Scooter Eco</h2>
-            <p>Eco, nuevo, eléctrico.</p>
-        </div>
-        <div class="card" data-categoria="bicicleta">
-            <img src="https://i.ibb.co/7z1VtND/image.png" alt="Bicicleta">
-            <h2>Bicicleta Eléctrica</h2>
-            <p>Económica, eléctrica.</p>
-        </div>
-        <div class="card" data-categoria="monopatin">
-            <img src="https://i.ibb.co/qkbngBd/image.png" alt="Monopatín">
-            <h2>Monopatín Eléctrico</h2>
-            <p>Popular, nuevo, eléctrico.</p>
-        </div>
-        <div class="card" data-categoria="patin">
-            <img src="https://i.ibb.co/fDWbxv6/image.png" alt="Patín">
-            <h2>Patín Eléctrico</h2>
-            <p>Económico, nuevo, eléctrico.</p>
-        </div>
-        <div class="card" data-categoria="Bicicleta">
-            <img src="https://i.ibb.co/KrbT3RR/image.png" alt="Bicicleta">
-            <h2>Bicicleta</h2>
-            <p>Económico, nuevo.</p>
-        </div>
+      </div>
     </div>
-</div>
+
 </template>
 
 <style>

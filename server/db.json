@@ -1,5 +1,5 @@
 {
-    "vehículos": [
+    "vehiculos": [
         {
             "id": 1,
             "tipo": "Scooter Electrico",
@@ -24,7 +24,7 @@
             "marca": "Ninebot",
             "modelo": "E2 Plus",
             "caracteristicas": "Económico, nuevo, eléctrico.",
-            "image": "",
+            "image": "https://i.ibb.co/syDc3gb/image.png",
             "published": true
         },
         {
@@ -33,7 +33,7 @@
             "marca": "Vsett",
             "modelo": "Mini Green",
             "caracteristicas": "Popular, nuevo, eléctrico.",
-            "image": "",
+            "image": "https://i.ibb.co/bgyR9T7/image.png",
             "published": true
         },
         {
@@ -42,7 +42,7 @@
             "marca": "Generico",
             "modelo": "Mini",
             "caracteristicas": "Popular, nuevo, eléctrico.",
-            "image": "",
+            "image": "https://i.ibb.co/tPZd0RK/image.png",
             "published": true
         },
         {
@@ -60,7 +60,7 @@
             "marca": "Onebot",
             "modelo": "Plegable",
             "caracteristicas": "Económico, nuevo, Plegable.",
-            "image": "",
+            "image": "https://i.ibb.co/tZXdWQm/image.png",
             "published": true
         },
         {
@@ -69,7 +69,7 @@
             "marca": "SMRLO",
             "modelo": "YK-EB009",
             "caracteristicas": "Económico, nuevo, Plegable.",
-            "image": "",
+            "image": "https://i.ibb.co/WV7VRMm/image.png",
             "published": true
         },
         {
@@ -78,7 +78,7 @@
             "marca": "Best",
             "modelo": "BMX",
             "caracteristicas": "Popular, nuevo.",
-            "image": "",
+            "image": "https://i.ibb.co/cNxVqBL/image.png",
             "published": true
         },
         
@@ -100,7 +100,8 @@
             "ubicación": "AV. Los Proceres 757, VMT",
             "telefono": "654321987",
             "Vehículos": "Scooters, Bicicletas y Monopatines",
-            "published": true
+            "published": true,
+            "image": "https://i.ibb.co/7pgSvf8/image.png"
         },
         {
             "id": 12,
@@ -109,7 +110,8 @@
             "ubicación": "C. Don Diego de Noche 376, Surco 15023",
             "telefono": "999947369",
             "Vehículos": "Scooters, Bicicletas y Monopatines",
-            "published": true
+            "published": true,
+            "image": "https://i.ibb.co/pdPbgHm/image.png"
         },
         {
             "id": 12,
@@ -118,7 +120,8 @@
             "ubicación": "Jr. Andahuaylas 1138, Lima 15033",
             "telefono": "990609365",
             "Vehículos": "Scooters y Bicicletas",
-            "published": true
+            "published": true,
+            "image": "https://i.ibb.co/X2yNdzs/image.png"
         }
     ],
     "planes": [

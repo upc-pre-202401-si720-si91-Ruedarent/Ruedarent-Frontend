@@ -1,5 +1,12 @@
 <template>
   <div class="login">
+    <div class="login__socials">
+      <h1>Inicia Sesión</h1>
+      <div>
+        <button>Iniciar sesión con Google</button>
+        <button>Iniciar sesión con Microsoft</button>
+      </div>
+    </div>
     <form class="form">
       <div class="form__group">
         <label for="email">Email</label>
@@ -11,16 +18,34 @@
       </div>
       <button type="submit">Login</button>
     </form>
+   <span>
+    No tienes cuenta? <a href="/register">Registrate</a>
+   </span>
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .login {
+ .login {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
     align-items: center;
   }
+
+  .login__socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login__socials div {
+    display: flex;
+    flex-direction: column;
+  }
+
   .form {
     display: flex;
     flex-direction: column;
@@ -39,6 +64,7 @@
     padding: 0.5rem;
     border-radius: 5px;
     border: none;
+    border: 1px solid #333;
   } 
 
   button {
@@ -47,10 +73,15 @@
     margin-top: .5rem;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #34D399;
+    color: white;
   }
 
   button:hover {
-    background-color: #eeee;
+    background-color: #53A37B;
   }
-}
+
+  span a {
+    color: #34D399
+  }
 </style>

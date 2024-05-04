@@ -12,25 +12,25 @@ export class TutorialsApiServer{
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
     getAll() {
-        return http.get('/vehículos');
+        return http.get('/vehiculos');
     }
 
     /**
     * Create a new vehículos
-    * @param vehículosResource - vehículos object to create
+    * @param vehiculosResource - vehículos object to create
     */
 
-    create(vehículosResource){
-        return http.post("/vehículos", vehículosResource);
+    create(vehiculosResource){
+        return http.post("/vehiculos", vehiculosResource);
     }
     /**
      * Update a vehículos
      * @param id - vehículos id to updated
-     * @param vehículosResource - vehículos object with data
+     * @param vehiculosResource - vehículos object with data
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
-    update(id, vehículosResource) {
-        return http.put(`/vehículos/${id}`, vehículosResource);
+    update(id, vehiculosResource) {
+        return http.put(`/vehiculos/${id}`, vehiculosResource);
     }
 
     /**
@@ -39,15 +39,15 @@ export class TutorialsApiServer{
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
     delete(id) {
-        return http.delete(`/vehículos/${id}`);
+        return http.delete(`/vehiculos/${id}`);
     }
     /**
-     * Get vehículos by id
+     * Get vehiculos by id
      * @param {*} id 
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
     getById(id) {
-        return http.get(`/vehículos/${id}`)
+        return http.get(`/vehiculos/${id}`)
     }
     /**
      * Get all vehículos that match the given tipo
@@ -55,6 +55,6 @@ export class TutorialsApiServer{
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
     findByTipo(tipo) {
-        return http.get(`/vehículos?=title=${tipo}`)
+        return http.get(`/vehiculos?=title=${tipo}`)
     }
 }
