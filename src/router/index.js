@@ -81,6 +81,11 @@ const router = createRouter({
       path:'/VehicleRegisterOwner',
       name:'VehicleRegisterOwner',
       component: () => import('../views/VehicleRegisterOwnerView.vue')
+    },
+    {
+      path:'/UserFilterView',
+      name:'UserFilterView',
+        component: () => import('../views/UserFilterView.vue')
     }
   ]
 })
