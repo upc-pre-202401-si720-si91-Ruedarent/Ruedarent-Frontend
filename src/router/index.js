@@ -63,8 +63,8 @@ const router = createRouter({
       component: () => import('../views/RentVehicleView.vue')
     },
     {
-      path: '/MyOwnerProfile',
-      name: 'MyOwnerProfile',
+      path: '/OwnerProfileView',
+      name: 'OwnerProfileView',
       component: () => import('../views/OwnerProfileView.vue')
     },
     {
@@ -81,6 +81,11 @@ const router = createRouter({
       path:'/VehicleRegisterOwner',
       name:'VehicleRegisterOwner',
       component: () => import('../views/VehicleRegisterOwnerView.vue')
+    },
+    {
+      path:'/OwnerViewVehicles',
+      name:'OwnerViewVehicles',
+      component: () => import('../views/OwnerViewVehicles.vue')
     }
   ]
 })
