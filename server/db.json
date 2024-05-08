@@ -2,7 +2,7 @@
     "vehiculos": [
         {
             "id": 1,
-            "tipo": "Scooter Electrico",
+            "tipo": "Scooter eléctrico",
             "marca": "Dualtron",
             "modelo": "Dolphin",
             "caracteristicas": "Económico, nuevo, eléctrico.",
@@ -11,7 +11,7 @@
         },
         {
             "id": 2,
-            "tipo": "Scooter Electrico",
+            "tipo": "Scooter eléctrico",
             "marca": "Kingsong",
             "modelo": "N15 Pro",
             "caracteristicas": "Económico, nuevo, eléctrico.",
@@ -20,7 +20,7 @@
         },
         {
             "id": 3,
-            "tipo": "Scooter Electrico",
+            "tipo": "Scooter eléctrico",
             "marca": "Ninebot",
             "modelo": "E2 Plus",
             "caracteristicas": "Económico, nuevo, eléctrico.",
@@ -39,7 +39,7 @@
         {
             "id": 5,
             "tipo": "Scooter",
-            "marca": "Generico",
+            "marca": "Genérico",
             "modelo": "Mini",
             "caracteristicas": "Popular, nuevo, eléctrico.",
             "image": "https://i.ibb.co/tPZd0RK/image.png",
@@ -59,7 +59,7 @@
             "tipo": "Bicicleta eléctrica",
             "marca": "Onebot",
             "modelo": "Plegable",
-            "caracteristicas": "Económico, nuevo, Plegable.",
+            "caracteristicas": "Económico, nuevo, plegable.",
             "image": "https://i.ibb.co/tZXdWQm/image.png",
             "published": true
         },
@@ -68,7 +68,7 @@
             "tipo": "Bicicleta eléctrica",
             "marca": "SMRLO",
             "modelo": "YK-EB009",
-            "caracteristicas": "Económico, nuevo, Plegable.",
+            "caracteristicas": "Económico, nuevo, plegable.",
             "image": "https://i.ibb.co/WV7VRMm/image.png",
             "published": true
         },
@@ -84,7 +84,7 @@
         
         {
             "id": 10,
-            "tipo": "Monopatin",
+            "tipo": "Monopatín",
             "marca": "JEEP",
             "modelo": "XXXX",
             "caracteristicas": "Económica, nuevo.",
@@ -96,8 +96,8 @@
         {
             "id": 11,
             "nombre": "Ricardo",
-            "descripcion": "Busco vehículos electricos para ayudar al medio ambiente",
-            "ubicación": "AV. Los Proceres 757, VMT",
+            "descripcion": "Busco vehículos eléctricos para ayudar al medio ambiente.",
+            "ubicación": "AV. Los Próceres 757, VMT",
             "telefono": "654321987",
             "Vehículos": "Scooters, Bicicletas y Monopatines",
             "published": true,
@@ -106,7 +106,7 @@
         {
             "id": 12,
             "nombre": "Mónica",
-            "descripcion": "Busco vehículos electricos para ayudar al medio ambiente",
+            "descripcion": "Busco vehículos eléctricos para ayudar al medio ambiente.",
             "ubicación": "C. Don Diego de Noche 376, Surco 15023",
             "telefono": "999947369",
             "Vehículos": "Scooters, Bicicletas y Monopatines",
@@ -116,7 +116,7 @@
         {
             "id": 12,
             "nombre": "Beto",
-            "descripcion": "Busco vehículos electricos para ayudar al medio ambiente",
+            "descripcion": "Busco vehículos eléctricos para ayudar al medio ambiente.",
             "ubicación": "Jr. Andahuaylas 1138, Lima 15033",
             "telefono": "990609365",
             "Vehículos": "Scooters y Bicicletas",

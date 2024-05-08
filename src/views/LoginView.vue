@@ -1,25 +1,26 @@
 <template>
   <div class="login">
     <div class="login__socials">
-      <h1>Inicia Sesión</h1>
+      <h1>Inicia sesión</h1>
       <div>
         <button>Iniciar sesión con Google</button>
-        <button>Iniciar sesión con Microsoft</button>
+        <button class="social-button">
+        <img class="social-logo2" src="https://i.ibb.co/H4Zc1QR/image.png" alt="Microsoft Logo"/> Iniciar sesión con Microsoft</button>
       </div>
     </div>
     <form class="form">
       <div class="form__group">
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="john@email.com" />
+        <label for="email">Correo electrónico</label>
+        <input id="email" type="email" placeholder="Correo electrónico"/>
       </div>
       <div class="form__group">
-        <label for="password">Password</label>
-        <input type="password" placeholder="*********" />
+        <label for="contraseña">Contraseña</label>
+        <input type="contraseña" placeholder="Contraseña"/>
       </div>
-      <button type="submit">Login</button>
+      <button type="submit">Iniciar sesión</button>
     </form>
    <span>
-    No tienes cuenta? <a href="/register">Registrate</a>
+    ¿No tienes una cuenta? <a href="/register">Regístrate</a>
    </span>
   </div>
 </template>
@@ -84,4 +85,15 @@
   span a {
     color: #34D399
   }
+
+  .social-logo2 {
+    width: 17px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .social-button {
+    text-align: center;
+  }
+
 </style>

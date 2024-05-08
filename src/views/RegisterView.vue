@@ -3,46 +3,47 @@
     <div class="login__socials">
       <h1>Regístrate</h1>
       <div>
-        <button>Registrarse con Google</button>
-        <button>Registrarse con Microsoft</button>
+        <button>Regístrate con Google</button>
+        <button class="social-button">
+        <img class="social-logo2" src="https://i.ibb.co/H4Zc1QR/image.png" alt="Microsoft Logo"/> Regístrate con Microsoft</button>
       </div>
     </div>
     <form class="form">
       <div class="form__group">
         <div class="form__group__top">
-          <input id="name" type="text" placeholder="Nombres" />
-          <input id="lastName" type="text" placeholder="Apellidos" />
+          <input id="name" type="text" placeholder="Nombres"/>
+          <input id="lastName" type="text" placeholder="Apellidos"/>
         </div>
         <div class="form__group__bot">
-          <input id="email" type="email" placeholder="Correo electronico" />
+          <input id="email" type="email" placeholder="Correo electrónico"/>
         </div>
       </div>
       <div class="form__group">
         <div class="form__group__top">
-          <input id="password" type="password" placeholder="Contraseña" />
-          <input id="passwordConfirm" type="password" placeholder="Confirmación" />
+          <input id="password" type="password" placeholder="Contraseña"/>
+          <input id="passwordConfirm" type="password" placeholder="Confirmación"/>
         </div>
         <div class="form__group__bot">
-          <input id="dob" type="date" placeholder="Fecha de nacimiento" />
+          <input id="dob" type="date" placeholder="Fecha de nacimiento"/>
           <label>DD/MM/AAAA</label>
         </div>
       </div>
       <div class="form__group">
         <div class="form__group__top">
          <div class="gender-select">
-          <input type="radio" id="male" />
-          <label for="male" id="male">Male</label>
+          <input type="radio" id="masculino"/>
+          <label for="masculino" id="masculino">Masculino</label>
          </div>
          <div class="gender-select">
-          <input type="radio" id="female" />
-          <label for="female" id="female">Female</label>
+          <input type="radio" id="femenino" />
+          <label for="female" id="femenino">Femenino</label>
          </div>
         </div>
       </div>
-      <button type="submit">Crear Cuenta</button>
+      <button type="submit">Crear cuenta</button>
     </form>
    <span>
-    ¿Tienes cuenta? <a href="/login">Inicia Sesión</a>
+    ¿Tienes una cuenta? <a href="/login">Inicia sesión</a>
    </span>
   </div>
 </template>
@@ -133,4 +134,11 @@
   span a {
     color: #34D399
   }
+
+  .social-logo2 {
+    width: 17px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
 </style>
