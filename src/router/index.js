@@ -88,8 +88,8 @@ const router = createRouter({
         component: () => import('../views/UserFilterView.vue')
     },
     {
-      path: '/header',
-      name: 'header',
+      path: '/headerowner',
+      name: 'headerowner',
       component: () => import('../components/headerView.vue')
     }
 
