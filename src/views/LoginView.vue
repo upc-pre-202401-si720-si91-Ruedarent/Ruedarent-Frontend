@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col justify-center items-center gap-4 min-h-screen">
     <div class="flex flex-col justify-center items-center gap-2">
+      <img class="w-20 h-20" src="/src/assets/logoo.jpeg" alt="logo" />
       <h1 class="text-2xl font-medium">Inicia sesión</h1>
       <ul class="flex flex-col items-center">
         <li>
