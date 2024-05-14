@@ -1,5 +1,5 @@
 <script>
-import profileImage from "@/assets/vehicleimage.png";
+import profileImage from "@/assets/img/vehicleimage.png";
 
 
 export default {
@@ -20,7 +20,7 @@ export default {
   <div class="container">
 
 
-    <img class="arrowback"  src="../assets/arrowrent.png" alt="Arrow Rent" />
+    <img class="arrowback"  src="../assets/img/arrowrent.png" alt="Arrow Rent" />
 
 
   </div>

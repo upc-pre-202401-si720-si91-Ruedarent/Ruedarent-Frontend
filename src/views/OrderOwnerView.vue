@@ -1,5 +1,5 @@
 <script>
-import profileImage from "@/assets/bikeicon.png";
+import profileImage from "@/assets/img/bikeicon.png";
 
 export default {
   name: "OrderOwnerView",
@@ -16,7 +16,7 @@ export default {
 
   <div class="containerplans">
 
-    <img class="arrowback"  src="../assets/arrowrent.png" alt="Arrow Rent" />
+    <img class="arrowback"  src="../assets/img/arrowrent.png" alt="Arrow Rent" />
 
   </div>
 
@@ -63,7 +63,7 @@ export default {
               </div>
 
               </div>
-              <pv-button class="buttonpaypal" label="Pagar" ><p>Pagar</p> <img class="paypalicon" src="../assets/paypalicon.png" alt="Paypal" /></pv-button>
+              <pv-button class="buttonpaypal" label="Pagar" ><p>Pagar</p> <img class="paypalicon" src="../assets/img/paypalicon.png" alt="Paypal" /></pv-button>
 
             </div>
 
@@ -194,11 +194,6 @@ export default {
   display: block;
   grid-column: 2/ -1;
   position: relative;
-
-
-}
-.titleinformation{
-
 
 
 }

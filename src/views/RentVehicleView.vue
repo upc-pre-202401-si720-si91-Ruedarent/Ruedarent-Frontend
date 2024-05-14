@@ -1,5 +1,5 @@
 <script>
-import profileImage from "@/assets/vehicleimage.png";
+import profileImage from "@/assets/img/vehicleimage.png";
 
 export default {
   name: "RentVehicleView",
@@ -16,7 +16,7 @@ export default {
 <template>
   <div class="container">
 
-    <img class="arrowback"  src="../assets/arrowrent.png" alt="Arrow Rent" />
+    <img class="arrowback"  src="../assets/img/arrowrent.png" alt="Arrow Rent" />
 
   </div>
 
@@ -53,7 +53,7 @@ export default {
                 <p>información</p>
               </div>
             </div>
-            <pv-button class="buttonwpp" label="Contactar" ><p>Contactar</p> <img class="whatsappicon" src="../assets/whatsappicon.png" alt="WhatsApp" /></pv-button>
+            <pv-button class="buttonwpp" label="Contactar" ><p>Contactar</p> <img class="whatsappicon" src="../assets/img/whatsappicon.png" alt="WhatsApp" /></pv-button>
           </div>
 
 
