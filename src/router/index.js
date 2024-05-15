@@ -10,7 +10,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/Auth/LoginView.vue')
     },
     {
       path: '/register',
@@ -18,7 +18,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/RegisterView.vue')
+      component: () => import('../views/Auth/RegisterView.vue')
     },
     {
       path: '/Recommendations',
@@ -26,7 +26,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/RecommendationsView.vue')
+      component: () => import('../views/Renter/RecommendationsView.vue')
     },
     {
       path: '/myProfile',
@@ -34,12 +34,12 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/UserProfileRents.vue')
+      component: () => import('../views/Renter/UserProfileRents.vue')
     },
     {
       path: '/vehicles',
       name: 'Vehicle',
-      component: () => import('../views/VehiclesView.vue')
+      component: () => import('../views/Renter/VehiclesView.vue')
     },
     {
       path: '/RentVehicle',
@@ -47,32 +47,32 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/RentVehicleView.vue')
+      component: () => import('../views/Owner/RentVehicleView.vue')
     },
     {
       path: '/OwnerProfileView',
       name: 'OwnerProfileView',
-      component: () => import('../views/OwnerProfileView.vue')
+      component: () => import('../views/Owner/OwnerProfileView.vue')
     },
     {
       path: '/PlansOwner',
       name: 'PlansOwner',
-      component: () => import('../views/PlansOwnerView.vue')
+      component: () => import('../views/Owner/PlansOwnerView.vue')
     },
     {
       path:'/OrderOwner',
       name:'OrderOwner',
-      component: () => import('../views/OrderOwnerView.vue')
+      component: () => import('../views/Owner/OrderOwnerView.vue')
     },
     {
       path:'/VehicleRegisterOwner',
       name:'VehicleRegisterOwner',
-      component: () => import('../views/VehicleRegisterOwnerView.vue')
+      component: () => import('../views/Owner/VehicleRegisterOwnerView.vue')
     },
     {
       path:'/OwnerViewVehicles',
       name:'OwnerViewVehicles',
-      component: () => import('../views/OwnerViewVehicles.vue')
+      component: () => import('../views/Owner/OwnerViewVehicles.vue')
     }
   ]
 })

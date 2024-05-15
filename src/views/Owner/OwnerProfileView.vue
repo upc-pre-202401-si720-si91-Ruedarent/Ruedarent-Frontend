@@ -15,16 +15,10 @@ export default {
 }
 </script>
 
-
 <template>
   <div class="container">
-
-
-    <img class="arrowback"  src="../assets/img/arrowrent.png" alt="Arrow Rent" />
-
-
+    <img class="arrowback"  src="/src/assets/img/arrowrent.png" alt="Arrow Rent" />
   </div>
-
 
   <div class="Rent">
     <pv-card class="card">
@@ -33,7 +27,6 @@ export default {
 
 
           <div class="profileImage">
-            <img src="https://i.ibb.co/cNxVqBL/image.png" alt="">
             <pv-image class="profileImage" :src="profileImage"  alt="profile Image" width="350" preview />
           </div>
 
