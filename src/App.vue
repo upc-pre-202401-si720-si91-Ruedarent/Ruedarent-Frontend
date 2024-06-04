@@ -17,7 +17,6 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/RentVehicle">Rent Vehicle</RouterLink>
         <RouterLink to="/VehicleRegisterOwner">Vehicle registration</RouterLink>
         <RouterLink to="/OwnerViewVehicles">Owner: See Vehicle</RouterLink>
-
       </nav>
     </div>
   </header>
