@@ -1,144 +1,100 @@
 <template>
-  <div class="register">
-    <div class="login__socials">
-      <h1>Regístrate</h1>
-      <div>
-        <button>Regístrate con Google</button>
-        <button class="social-button">
-        <img class="social-logo2" src="https://i.ibb.co/H4Zc1QR/image.png" alt="Microsoft Logo"/> Regístrate con Microsoft</button>
-      </div>
+  <div class="flex flex-col justify-center items-center gap-4 min-h-screen">
+    <div class="flex flex-col justify-center gap-2 items-center">
+      <img class="w-20 h-20" src="/src/assets/logoo.jpeg" alt="logo" />
+      <h1 class="text-2xl font-medium">Regístrate</h1>
+      <ul class="flex items-start gap-2">
+        <li>
+          <button>Regístrate con Google</button>
+        </li>
+        <li>
+          <button class="flex flex-row items-center gap-2">
+            <img
+              class="social-logo2"
+              src="https://i.ibb.co/H4Zc1QR/image.png"
+              alt="Microsoft Logo"
+            />
+            Regístrate con Microsoft
+          </button>
+        </li>
+      </ul>
     </div>
-    <form class="form">
-      <div class="form__group">
-        <div class="form__group__top">
-          <input id="name" type="text" placeholder="Nombres"/>
-          <input id="lastName" type="text" placeholder="Apellidos"/>
+    <form class="flex flex-col justify-center items-center gap-2 p-1">
+      <div class="flex gap-1 flex-col w-full">
+        <div class="flex flex-row justify-between gap-1">
+          <input id="name" type="text" placeholder="Nombres" />
+          <input id="lastName" type="text" placeholder="Apellidos" />
         </div>
-        <div class="form__group__bot">
-          <input id="email" type="email" placeholder="Correo electrónico"/>
+        <div class="flex flex-col gap-1">
+          <input id="email" type="email" placeholder="Correo electrónico" />
         </div>
       </div>
-      <div class="form__group">
-        <div class="form__group__top">
-          <input id="password" type="password" placeholder="Contraseña"/>
-          <input id="passwordConfirm" type="password" placeholder="Confirmación"/>
+      <div class="flex gap-1 flex-col w-full">
+        <div class="flex flex-row justify-around gap-1">
+          <input id="password" type="password" placeholder="Contraseña" />
+          <input
+            id="passwordConfirm"
+            type="password"
+            placeholder="Confirmación"
+          />
         </div>
-        <div class="form__group__bot">
-          <input id="dob" type="date" placeholder="Fecha de nacimiento"/>
+        <div class="flex flex-col gap-1">
+          <input id="dob" type="date" placeholder="Fecha de nacimiento" />
           <label>DD/MM/AAAA</label>
         </div>
       </div>
-      <div class="form__group">
-        <div class="form__group__top">
-         <div class="gender-select">
-          <input type="radio" id="masculino"/>
-          <label for="masculino" id="masculino">Masculino</label>
-         </div>
-         <div class="gender-select">
-          <input type="radio" id="femenino" />
-          <label for="female" id="femenino">Femenino</label>
-         </div>
+      <div class="flex gap-1 flex-col w-full">
+        <div class="flex flex-row justify-between">
+          <div class="gender-select">
+            <input type="radio" id="masculino" />
+            <label for="masculino" id="masculino">Masculino</label>
+          </div>
+          <div class="gender-select">
+            <input type="radio" id="femenino" />
+            <label for="female" id="femenino">Femenino</label>
+          </div>
         </div>
       </div>
       <button type="submit">Crear cuenta</button>
     </form>
-   <span>
-    ¿Tienes una cuenta? <a href="/login">Inicia sesión</a>
-   </span>
+    <span> ¿Tienes una cuenta? <a href="/login">Inicia sesión</a> </span>
   </div>
 </template>
 
 <style>
- .register {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-  }
+input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #333;
+}
 
-  .login__socials {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+button {
+  padding: 0.5rem;
+  border: none;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #34d399;
+  color: white;
+}
 
-  .login__socials div {
-    display: flex;
-    flex-direction: column;
-  }
+.form__group__bot label {
+  font-size: small;
+  text-decoration: underline;
+}
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 1rem;
-    width: 420px;
-  }
+button:hover {
+  background-color: #53a37b;
+}
 
-  .form__group {
-    display: flex;
-    gap: .8rem;
-    width: 100%;
-    flex-direction: column;
-  }
+span a {
+  color: #34d399;
+}
 
-  .form__group__top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .form__group__top:last-child {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .form__group__bot {
-    display: flex;
-    gap: .8rem;
-    flex-direction: column;
-  }
-
-  input {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: none;
-    border: 1px solid #333;
-  } 
-
-  button {
-    padding: .5rem;
-    border: none;
-    margin-top: .5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #34D399;
-    color: white;
-  }
-
-  .form__group__bot label {
-    font-size: small;
-    text-decoration: underline;
-  }
-
-  button:hover {
-    background-color: #53A37B;
-  }
-
-  span a {
-    color: #34D399
-  }
-
-  .social-logo2 {
-    width: 17px;
-    text-align: center;
-    vertical-align: middle;
-  }
-
+.social-logo2 {
+  width: 17px;
+  text-align: center;
+  vertical-align: middle;
+}
 </style>
