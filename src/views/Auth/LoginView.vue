@@ -5,9 +5,12 @@
       <h1 class="text-2xl font-medium">Inicia sesión</h1>
       <ul class="flex flex-col items-center">
         <li>
-          <button class="flex flex-row items-center gap-2">
-            <img class="social-logo3" src="https://i.ibb.co/PgjqCyd/image.png" alt="Google Logo"/>
-            Iniciar sesión con Google</button>
+          <button>
+            <img class="social-logo3"
+                 src="https://i.ibb.co/PgjqCyd/image.png"
+                 alt="Google Logo"/>
+            Iniciar sesión con Google
+          </button>
         </li>
         <li>
           <button class="flex flex-row items-center gap-2">
@@ -39,22 +42,6 @@
 </template>
 
 <style>
- .login {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .login__socials {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .login__socials div {
     display: flex;
     flex-direction: column;
@@ -104,8 +91,9 @@
   text-align: center;
   vertical-align: middle;
 }
-
-.social-button {
-  text-align: center;
-}
+ .social-logo3 {
+   width: 21px;
+   float: left;
+   vertical-align: middle;
+ }
 </style>

@@ -3,11 +3,13 @@
     <div class="flex flex-col justify-center gap-2 items-center">
       <img class="w-20 h-20" src="/src/assets/logoo.jpeg" alt="logo" />
       <h1 class="text-2xl font-medium">Regístrate</h1>
-      <ul class="flex items-start gap-2">
+      <ul class="flex flex-col items-center">
         <li>
-          <button class="flex flex-row items-center gap-2">
-            <img class="social-logo3" src="https://i.ibb.co/PgjqCyd/image.png"
-                 alt="Google Logo"/> Regístrate con Google</button>
+          <button>
+            <img class="social-logo3"
+                 src="https://i.ibb.co/PgjqCyd/image.png"
+                 alt="Google Logo"/>
+            Regístrate con Google
           </button>
         </li>
         <li>
@@ -63,22 +65,6 @@
 </template>
 
 <style>
- .register {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .login__socials {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .login__socials div {
     display: flex;
     flex-direction: column;
