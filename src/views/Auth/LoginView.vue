@@ -3,9 +3,12 @@
     <div class="login__socials">
       <h1>Inicia sesión</h1>
       <div>
-        <button>Iniciar sesión con Google</button>
+        <button class="social-button2">
+          <img class="social-logo3" src="https://i.ibb.co/PgjqCyd/image.png" alt="Google Logo"/> Iniciar sesión con Google
+        </button>
         <button class="social-button">
-        <img class="social-logo2" src="https://i.ibb.co/H4Zc1QR/image.png" alt="Microsoft Logo"/> Iniciar sesión con Microsoft</button>
+        <img class="social-logo2" src="https://i.ibb.co/H4Zc1QR/image.png" alt="Microsoft Logo"/> Iniciar sesión con Microsoft
+        </button>
       </div>
     </div>
     <form class="form">
@@ -95,5 +98,11 @@
   .social-button {
     text-align: center;
   }
+
+ .social-logo3 {
+   width: 21px;
+   float: left;
+   vertical-align: middle;
+ }
 
 </style>

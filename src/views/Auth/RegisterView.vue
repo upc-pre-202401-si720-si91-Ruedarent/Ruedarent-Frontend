@@ -3,7 +3,8 @@
     <div class="login__socials">
       <h1>Regístrate</h1>
       <div>
-        <button>Regístrate con Google</button>
+        <button class="social-button2">
+          <img class="social-logo3" src="https://i.ibb.co/PgjqCyd/image.png" alt="Google Logo"/> Regístrate con Google</button>
         <button class="social-button">
         <img class="social-logo2" src="https://i.ibb.co/H4Zc1QR/image.png" alt="Microsoft Logo"/> Regístrate con Microsoft</button>
       </div>
@@ -138,6 +139,12 @@
   .social-logo2 {
     width: 17px;
     text-align: center;
+    vertical-align: middle;
+  }
+
+  .social-logo3 {
+    width: 21px;
+    float: left;
     vertical-align: middle;
   }
 
