@@ -5,7 +5,9 @@
       <h1 class="text-2xl font-medium">Inicia sesión</h1>
       <ul class="flex flex-col items-center">
         <li>
-          <button>Iniciar sesión con Google</button>
+          <button class="flex flex-row items-center gap-2">
+            <img class="social-logo3" src="https://i.ibb.co/PgjqCyd/image.png" alt="Google Logo"/>
+            Iniciar sesión con Google</button>
         </li>
         <li>
           <button class="flex flex-row items-center gap-2">
@@ -22,57 +24,80 @@
     <form class="form">
       <div class="form__group">
         <label for="email">Correo electrónico</label>
-        <input id="email" type="email" placeholder="Correo electrónico" />
+        <input id="email" type="email" placeholder="Correo electrónico"/>
       </div>
       <div class="form__group">
         <label for="contraseña">Contraseña</label>
-        <input type="contraseña" placeholder="Contraseña" />
+        <input type="contraseña" placeholder="Contraseña"/>
       </div>
       <button type="submit">Iniciar sesión</button>
     </form>
-    <span> ¿No tienes una cuenta? <a href="/register">Regístrate</a> </span>
+   <span>
+    ¿No tienes una cuenta? <a href="/register">Regístrate</a>
+   </span>
   </div>
 </template>
 
 <style>
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 1rem;
-  width: 420px;
-}
+ .login {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
 
-.form__group {
-  display: flex;
-  gap: 0.2rem;
-  flex-direction: column;
-}
+  .login__socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-input {
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: none;
-  border: 1px solid #333;
-}
+  .login__socials div {
+    display: flex;
+    flex-direction: column;
+  }
 
-button {
-  padding: 0.5rem;
-  border: none;
-  margin-top: 0.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #34d399;
-  color: white;
-}
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem;
+    width: 420px;
+  }
 
-button:hover {
-  background-color: #53a37b;
-}
+  .form__group {
+    display: flex;
+    gap: .2rem;
+    flex-direction: column;
+  }
 
-span a {
-  color: #34d399;
-}
+  input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #333;
+  } 
+
+  button {
+    padding: .5rem;
+    border: none;
+    margin-top: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #34D399;
+    color: white;
+  }
+
+  button:hover {
+    background-color: #53A37B;
+  }
+
+  span a {
+    color: #34D399
+  }
 
 .social-logo2 {
   width: 17px;

@@ -3,6 +3,7 @@
     <h2 class="titlecontainer">Lo más destacado</h2>
   </div>
 
+
   <div class="card">
     <Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="4" :showItemNavigators="true" :showThumbnails="false" :showIndicators="true" containerStyle="max-width: 640px; margin: auto;">
       <template #item="slotProps">
@@ -12,14 +13,16 @@
         <img :src="slotProps.item.src" :alt="slotProps.item.alt" style="width: 100px; height: auto;" />
       </template>
     </Galleria>
-    <div class="buttoncontainer text-center"> 
+    <div class="buttoncontainer text-center">
       <pv-button class="btncontainer"> ‎ Ver más</pv-button>
     </div>
   </div>
 </template>
 
+
 <script>
 import Galleria from 'primevue/galleria';
+
 
 export default {
   components: {
@@ -72,16 +75,19 @@ export default {
 }
 </script>
 
+
 <style>
 .ruedarenticon,
 .profileicon {
   grid-column: 4;
 }
 
+
 .buttonheader,
 .buttonsession {
   grid-column: 4;
 }
+
 
 .profileicon {
   width: 2rem;
@@ -91,6 +97,7 @@ export default {
   margin-bottom: 0.7rem;
 }
 
+
 .buttonheader {
   margin-right: 1rem;
   margin-left: 1rem;
@@ -99,6 +106,7 @@ export default {
   padding: 0.5rem 4rem 1.5rem 1rem;
 }
 
+
 .buttonsession {
   margin-right: 1rem;
   border-radius: 1rem;
@@ -106,25 +114,30 @@ export default {
   padding: 0.5rem 1rem 1.5rem 0;
 }
 
+
 .inputbutton {
   padding: 0.5rem;
 }
+
 
 .container {
   width: 100%;
   justify-content: space-between;
 }
 
+
 img {
   width: 120px;
   border-radius: 1rem;
 }
+
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
 }
+
 
 .card {
   width: 320px;
@@ -136,6 +149,7 @@ h2 {
   cursor: pointer;
 }
 
+
 .p-galleria-item-nav {
   color: black;
   top: 50%;
@@ -143,10 +157,12 @@ h2 {
   z-index: 999;
 }
 
+
 .p-galleria {
   background-color: #cccccc;
   border-radius: 1rem;
 }
+
 
 .btncontainer {
   margin-top: 1rem;
@@ -160,12 +176,16 @@ h2 {
   cursor: pointer;
 }
 
+
 .buttoncontainer {
-  text-align: center; 
+  text-align: center;
 }
+
 
 .btncontainer:hover {
   transform: scale(1.1);
 }
 
+
 </style>
+
