@@ -6,17 +6,18 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/register">Registro</RouterLink>
-        <RouterLink to="/login">Iniciar sesión</RouterLink>
+        <RouterLink to="/register">Sing Up</RouterLink>
+        <RouterLink to="/login">Sing In</RouterLink>
         <RouterLink to="/Recommendations">Recommendations</RouterLink>
         <RouterLink to="/myProfile">My Profile</RouterLink>
         <RouterLink to="/vehicles">See Vehicles</RouterLink>
-        <RouterLink to="/RentVehicle">Rent Vehicle</RouterLink>
-        <RouterLink to="/OwnerProfileView">Perfil Propietario</RouterLink>
-        <RouterLink to="/PlansOwner">Plans Owner</RouterLink>
         <RouterLink to="/OrderOwner">Order Owner</RouterLink>
-        <RouterLink to="/VehicleRegisterOwner">Owner: Registro vehículos</RouterLink>
-        <RouterLink to="/OwnerViewVehicles">Owner: Ver vehículos</RouterLink>
+        <RouterLink to="/PlansOwner">Plans</RouterLink>
+        <RouterLink to="/OwnerProfileView">Owner Profile</RouterLink>
+        <RouterLink to="/RentVehicle">Rent Vehicle</RouterLink>
+        <RouterLink to="/VehicleRegisterOwner">Vehicle registration</RouterLink>
+        <RouterLink to="/OwnerViewVehicles">Owner: See Vehicle</RouterLink>
+
       </nav>
     </div>
   </header>
