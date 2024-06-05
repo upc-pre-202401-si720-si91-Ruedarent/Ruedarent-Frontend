@@ -43,8 +43,7 @@
 
 </template>
 
-<style>
-
+<style scoped>
 img {
   width: 50%;
   height: auto;
