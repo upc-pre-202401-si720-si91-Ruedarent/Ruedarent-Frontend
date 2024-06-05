@@ -1,17 +1,31 @@
 <script>
-import { obtenerVehiculos } from '@/shared/services/http-common.js'; // Corregir el nombre del archivo y eliminar espacios adicionales
-  
-  export default {
-    data() {
-      return {
-        vehicles: [] 
-      };
-    },
-    async created() {
-   
-      this.vehicles = await obtenerVehiculos();
+import { obtenerVehiculos } from '@/shared/services/http-common.js';
+import { useRouter } from 'vue-router';
+import ButtonSelect from '@/Components/Button.vue';
+
+export default {
+  data() {
+    return {
+      vehicles: []
+    };
+  },
+  async created() {
+    this.vehicles = await obtenerVehiculos();
+  },
+  components: {
+    ButtonSelect // Corregir el nombre del componente
+  },
+  methods: {
+    handleButtonClick() {
+      // Utilizar this.$router en lugar de router
+      this.$router.push('/RentVehicle');
     }
-  };
+  },
+  setup() {
+    const router = useRouter(); // Inicializar router dentro de setup
+    return { router };
+  }
+};
 </script>
 
 <template>
@@ -24,19 +38,19 @@ import { obtenerVehiculos } from '@/shared/services/http-common.js'; // Corregir
           <img :src="vehicle.image" :alt="vehicle.tipo">
           <h2>{{ vehicle.tipo }}</h2>
           <p>{{ vehicle.caracteristicas }}</p>
+          <ButtonSelect @click="handleButtonClick"/>
         </div>
       </div>
     </div>
 
 </template>
 
-<style>
+<style scoped>
 
 .container {
 padding: 20px;
 margin: 0 auto;
 }
-
 
 h1 {
 text-align: center;
@@ -66,7 +80,7 @@ border-radius: 20px;
 @media (max-width: 768px) {
 .card {
     width: calc(50% - 20px);
-}
+  }
 }
 
 .card img {
@@ -82,4 +96,4 @@ margin: 10px 0;
 margin-bottom: 0;
 }
 
-</style>  
+</style>

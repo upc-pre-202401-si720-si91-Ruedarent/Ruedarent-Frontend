@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-col justify-center items-center gap-4 min-h-screen">
+  <div class="flex flex-col justify-center items-center gap-4">
     <div class="flex flex-col justify-center gap-2 items-center">
-      <img class="w-20 h-20" src="/src/assets/logoo.jpeg" alt="logo" />
+      <img class="w-20 h-20" src="/src/assets/img/logos/logosec.png" alt="logo" />
       <h1 class="text-2xl font-medium">Regístrate</h1>
       <ul class="flex items-start gap-2">
         <li>
           <button class="flex flex-row items-center gap-2">
             <img class="social-logo2"
-                src="https://i.ibb.co/PgjqCyd/image.png"
+                 src="https://i.ibb.co/PgjqCyd/image.png"
                  alt="Google Logo"/>
             Regístrate con Google
           </button>
@@ -66,7 +66,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 input {
   padding: 0.5rem;
   border-radius: 5px;
@@ -108,10 +108,23 @@ span a {
   margin-right: 0.5rem;
 }
 
-img {
-  width: 17px;
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-logo2 {
+    width: 20px; /* Cambia el tamaño de los iconos sociales */
+  }
+
+  button, input {
+    width: 100%; /* Ajusta el ancho de los botones y los inputs */
+  }
 }
 </style>
+
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 

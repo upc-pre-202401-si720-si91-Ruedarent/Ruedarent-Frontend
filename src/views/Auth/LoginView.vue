@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col justify-center items-center gap-4 min-h-screen">
+  <div class="flex flex-col justify-center items-center gap-4">
     <div class="flex flex-col justify-center items-center gap-2">
-      <img class="w-20 h-20" src="/src/assets/logoo.jpeg" alt="logo" />
+      <img class="w-20 h-20" src="/src/assets/img/logos/logosec.png" alt="logo" />
       <h1 class="text-2xl font-medium">Inicia sesión</h1>
       <ul class="flex items-start gap-2">
         <li>
@@ -39,7 +39,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .form {
   display: flex;
   flex-direction: column;
@@ -83,6 +83,22 @@ span a {
   width: 17px;
   text-align: center;
   vertical-align: middle;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-logo2 {
+    width: 20px; /* Cambia el tamaño de los iconos sociales */
+  }
+
+  button, input {
+    width: 100%; /* Ajusta el ancho de los botones y los inputs */
+  }
 }
 </style>
 

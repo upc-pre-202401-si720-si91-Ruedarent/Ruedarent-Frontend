@@ -76,7 +76,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .ruedarenticon,
 .profileicon {
   grid-column: 4;
