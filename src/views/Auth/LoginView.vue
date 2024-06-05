@@ -3,10 +3,10 @@
     <div class="flex flex-col justify-center items-center gap-2">
       <img class="w-20 h-20" src="/src/assets/logoo.jpeg" alt="logo" />
       <h1 class="text-2xl font-medium">Inicia sesión</h1>
-      <ul class="flex flex-col items-center">
+      <ul class="flex items-start gap-2">
         <li>
-          <button>
-            <img class="social-logo3"
+          <button class="flex flex-row items-center gap-2">
+            <img class="social-logo2"
                  src="https://i.ibb.co/PgjqCyd/image.png"
                  alt="Google Logo"/>
             Iniciar sesión con Google
@@ -15,9 +15,9 @@
         <li>
           <button class="flex flex-row items-center gap-2">
             <img
-              class="social-logo2"
-              src="https://i.ibb.co/H4Zc1QR/image.png"
-              alt="Microsoft Logo"
+                class="social-logo2"
+                src="https://i.ibb.co/H4Zc1QR/image.png"
+                alt="Microsoft Logo"
             />
             Iniciar sesión con Microsoft
           </button>
@@ -27,73 +27,61 @@
     <form class="form">
       <div class="form__group">
         <label for="email">Correo electrónico</label>
-        <input id="email" type="email" placeholder="Correo electrónico"/>
+        <input id="email" type="email" placeholder="Correo electrónico" />
       </div>
       <div class="form__group">
         <label for="contraseña">Contraseña</label>
-        <input type="contraseña" placeholder="Contraseña"/>
+        <input type="contraseña" placeholder="Contraseña" />
       </div>
       <button type="submit">Iniciar sesión</button>
     </form>
-   <span>
-    ¿No tienes una cuenta? <a href="/register">Regístrate</a>
-   </span>
+    <span> ¿No tienes una cuenta? <a href="/register">Regístrate</a> </span>
   </div>
 </template>
 
 <style>
-  .login__socials div {
-    display: flex;
-    flex-direction: column;
-  }
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem;
+  width: 420px;
+}
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    padding: 1rem;
-    width: 420px;
-  }
+.form__group {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+}
 
-  .form__group {
-    display: flex;
-    gap: .2rem;
-    flex-direction: column;
-  }
+input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #333;
+}
 
-  input {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: none;
-    border: 1px solid #333;
-  } 
+button {
+  padding: 0.5rem;
+  border: none;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #34d399;
+  color: white;
+}
 
-  button {
-    padding: .5rem;
-    border: none;
-    margin-top: .5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #34D399;
-    color: white;
-  }
+button:hover {
+  background-color: #53a37b;
+}
 
-  button:hover {
-    background-color: #53A37B;
-  }
-
-  span a {
-    color: #34D399
-  }
+span a {
+  color: #34d399;
+}
 
 .social-logo2 {
   width: 17px;
   text-align: center;
   vertical-align: middle;
 }
- .social-logo3 {
-   width: 21px;
-   float: left;
-   vertical-align: middle;
- }
 </style>
