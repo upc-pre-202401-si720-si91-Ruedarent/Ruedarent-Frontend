@@ -24,7 +24,7 @@
         </li>
       </ul>
     </div>
-    <form class="form">
+    <form class="form" @submit.prevent="handleSubmit">
       <div class="form__group">
         <label for="email">Correo electrónico</label>
         <input id="email" type="email" placeholder="Correo electrónico" />
@@ -85,3 +85,16 @@ span a {
   vertical-align: middle;
 }
 </style>
+
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const handleSubmit = () => {
+  // Aquí puedes agregar la lógica para manejar la creación de la cuenta
+
+  // Navegar a otra ruta después de crear la cuenta
+  router.push('/Recommendations');
+};
+</script>

@@ -24,7 +24,7 @@
         </li>
       </ul>
     </div>
-    <form class="flex flex-col justify-center items-center gap-2 p-1">
+    <form @submit.prevent="handleSubmit" class="flex flex-col justify-center items-center gap-2 p-1">
       <div class="flex gap-1 flex-col w-full">
         <div class="flex flex-row justify-between gap-1">
           <input id="name" type="text" placeholder="Nombres" />
@@ -113,4 +113,14 @@ img {
 }
 </style>
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const handleSubmit = () => {
+  // Aquí puedes agregar la lógica para manejar la creación de la cuenta
+
+  // Navegar a otra ruta después de crear la cuenta
+  router.push('/recommendations');
+};
 </script>
