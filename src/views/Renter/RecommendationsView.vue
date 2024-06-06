@@ -1,146 +1,90 @@
 <template>
-  <div class="container" style="margin-top: 40px;">
+  <div class="container">
     <h2 class="titlecontainer">Lo más destacado</h2>
   </div>
 
-
   <div class="card">
-    <Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="4" :showItemNavigators="true" :showThumbnails="false" :showIndicators="true" containerStyle="max-width: 640px; margin: auto;">
+    <Galleria :value="vehicles" :responsiveOptions="responsiveOptions" :numVisible="4"
+              :showItemNavigators="true" :showThumbnails="false" :showIndicators="true"
+              containerStyle="max-width: 400px; margin: auto;">
       <template #item="slotProps">
-        <img :src="slotProps.item.src" :alt="slotProps.item.alt" style="width: 100%" />
-      </template>
-      <template #thumbnail="slotProps">
-        <img :src="slotProps.item.src" :alt="slotProps.item.alt" style="width: 100px; height: auto;" />
+        <div class="vehicle-item">
+          <img :src="slotProps.item.image" :alt="slotProps.item.modelo" style="width: 100%" />
+          <div class="vehicle-details">
+            <h3>{{ slotProps.item.marca }} - {{ slotProps.item.modelo }}</h3>
+            <p>{{ slotProps.item.caracteristicas }}</p>
+            <button @click="handleButtonClick(slotProps.item.id)" class="btncontainer">Ver más</button>
+          </div>
+        </div>
       </template>
     </Galleria>
-    <div class="buttoncontainer text-center">
-      <pv-button class="btncontainer"> ‎ Ver más</pv-button>
-    </div>
+
   </div>
 </template>
 
-
 <script>
 import Galleria from 'primevue/galleria';
-
+import { obtenerVehiculos } from '@/shared/services/http-common.js';
+import { useRouter } from 'vue-router';
 
 export default {
-  components: {
-    Galleria
-  },
   data() {
     return {
-      checked: false,
-      images: [
-        {
-          id: 1,
-          src: 'https://i.ibb.co/jZ4dBdT/image.png',
-          alt: 'Scooter',
-        },
-        {
-          id: 2,
-          src: 'https://i.ibb.co/C5G2hXP/image.png',
-          alt: 'Scooter',
-        },
-        {
-          id: 3,
-          src: 'https://i.ibb.co/wYYBQSL/image.png',
-          alt: 'Bicicleta',
-        },
-        {
-          id: 5,
-          src: 'https://i.ibb.co/0DHvnnn/image.png',
-          alt: 'Patín',
-        },
-      ],
+      vehicles: [],
       responsiveOptions: [
         {
           breakpoint: '1024px',
-          numVisible: 3,
-          breakpointNumVisible: 3
+          numVisible: 4
         },
         {
           breakpoint: '768px',
-          numVisible: 2,
-          breakpointNumVisible: 2
+          numVisible: 3
         },
         {
           breakpoint: '560px',
-          numVisible: 1,
-          breakpointNumVisible: 1
+          numVisible: 1
         }
       ]
     };
+  },
+  async created() {
+    this.vehicles = await obtenerVehiculos();
+  },
+  components: {
+    Galleria
+  },
+  methods: {
+    /**
+     * This method is called when the "Ver más" button is clicked.
+     * It navigates to the 'RentVehicle' route, passing the id of the clicked vehicle as a route parameter.
+     * @param {Number} id - The id of the clicked vehicle.
+     */
+    handleButtonClick(id) {
+      this.$router.push({ name: 'RentVehicle', params: { id: id } });
+    }
+  },
+  setup() {
+    const router = useRouter();
+    return { router };
   }
 }
 </script>
 
-
 <style scoped>
-.ruedarenticon,
-.profileicon {
-  grid-column: 4;
-}
-
-
-.buttonheader,
-.buttonsession {
-  grid-column: 4;
-}
-
-
-.profileicon {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 0.3rem;
-  margin-left: 1rem;
-  margin-bottom: 0.7rem;
-}
-
-
-.buttonheader {
-  margin-right: 1rem;
-  margin-left: 1rem;
-  border-radius: 1rem;
-  border: 0.1rem;
-  padding: 0.5rem 4rem 1.5rem 1rem;
-}
-
-
-.buttonsession {
-  margin-right: 1rem;
-  border-radius: 1rem;
-  border: 0.1rem;
-  padding: 0.5rem 1rem 1.5rem 0;
-}
-
-
-.inputbutton {
-  padding: 0.5rem;
-}
-
-
 .container {
   width: 100%;
   justify-content: space-between;
 }
 
-
-img {
-  width: 120px;
-  border-radius: 1rem;
-}
-
-
-h2 {
+.titlecontainer {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
 }
 
-
 .card {
-  width: 320px;
+  width: 80%;
+  max-width: 640px;
   margin: auto;
   margin-bottom: 100px;
   border: 1px solid white;
@@ -149,20 +93,31 @@ h2 {
   cursor: pointer;
 }
 
+.vehicle-item {
+  position: relative;
+}
+
+.vehicle-details {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 .p-galleria-item-nav {
   color: black;
   top: 50%;
-  transform: translateY(-50);
+  transform: translateY(-50%);
   z-index: 999;
 }
-
 
 .p-galleria {
   background-color: #cccccc;
   border-radius: 1rem;
 }
-
 
 .btncontainer {
   margin-top: 1rem;
@@ -170,22 +125,16 @@ h2 {
   background: #34D399;
   border: none;
   padding: 8px 8px;
-  border: none;
   border-radius: 5px;
   width: 80px;
   cursor: pointer;
 }
 
-
 .buttoncontainer {
   text-align: center;
 }
 
-
 .btncontainer:hover {
   transform: scale(1.1);
 }
-
-
 </style>
-

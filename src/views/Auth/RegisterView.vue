@@ -5,7 +5,7 @@
       <h1 class="text-2xl font-medium">Regístrate</h1>
       <ul class="flex items-start gap-2">
         <li>
-          <button class="flex flex-row items-center gap-2">
+          <button @click="handleSubmit" class="flex flex-row items-center gap-2">
             <img class="social-logo2"
                  src="https://i.ibb.co/PgjqCyd/image.png"
                  alt="Google Logo"/>
@@ -13,7 +13,7 @@
           </button>
         </li>
         <li>
-          <button class="flex flex-row items-center gap-2">
+          <button @click="handleSubmit" class="flex flex-row items-center gap-2">
             <img
                 class="social-logo2"
                 src="https://i.ibb.co/H4Zc1QR/image.png"
