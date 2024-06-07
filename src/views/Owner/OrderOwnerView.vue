@@ -13,13 +13,6 @@ export default {
 </script>
 
 <template>
-
-  <div class="containerplans">
-
-    <img class="arrowback"  src="../assets/img/arrowrent.png" alt="Arrow Rent" />
-
-  </div>
-
   <div class="Order">
     <pv-card>
       <template #content>
