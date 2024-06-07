@@ -70,7 +70,7 @@ export default {
 </template>
 
 
-<style>
+<style scoped>
 .menubar {
   margin-top: 1rem;
   margin-left: 1rem;
