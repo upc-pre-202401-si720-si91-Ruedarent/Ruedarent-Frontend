@@ -1,138 +1,152 @@
-<template>
-  <div class="container">
-    <img class="arrowback" src="/src/assets/img/arrowrent.png" alt="Arrow Rent" />
-  </div>
-  <div class="Rent">
-    <pv-card class="card">
-      <template #content>
-        <div class="containerent">
-          <div class="profileImage">
-            <pv-image class="profileImage" :src="profileImage" alt="profile Image" width="350" preview />
-          </div>
-          <div class="rentdescription">
-            <div class="titleinformation">
-              <h1>Alquilar vehículo </h1>
-            </div>
-            <div class="containersinformation">
-              <div class="container1information">
-                <div class="categories">
-                  <p>Propietario(a):</p>
-                  <p>Tipo:</p>
-                  <p>Marca:</p>
-                  <p>Placa:</p>
-                  <p>Color:</p>
-                </div>
-              </div>
-              <div class="containerv2information">
-                <p>información</p>
-                <p>información</p>
-                <p>información</p>
-                <p>información</p>
-                <p>información</p>
-              </div>
-            </div>
-            <pv-button class="buttonwpp" label="Contactar">
-              <p>Contactar</p> <img class="whatsappicon" src="/src/assets/img/whatsappicon.png" alt="WhatsApp" />
-            </pv-button>
-          </div>
-        </div>
-      </template>
-    </pv-card>
-  </div>
-</template>
-
 <script>
 import profileImage from "@/assets/img/vehicleimage.png";
+//import { obtenerVehiculos } from "@/shared/services/http-common.js";
 
 export default {
+  props: ['id'],
   name: "RentVehicleView",
   data() {
     return {
+      vehicles: null,
       checked: false,
       profileImage
-    }
-  }
+    };
+  },
+  async created() {
+    /**
+     * This lifecycle hook is called when the component is created.
+     * It fetches the list of vehicles and finds the one with the id that matches the prop.
+     * The details of this vehicle are then stored in the 'vehicles' data property.
+     */
+    /*const vehicles = await obtenerVehiculos();
+    this.vehicles = vehicles.find((vehicle) => vehicle.id === parseInt(this.id));
+    this.loading = true;*/
+  },
+  methods: {
+    /**
+     * This method is called when the "Contactar" button is clicked.
+     * It opens a new tab with the WhatsApp chat of the vehicle owner.
+     */
+    handleButtonClick() {
+      window.open("https://wa.me/990606385", "_blank");
+    },
+  },
 }
 </script>
 
+<template>
+  <pv-card class="card">
+    <template #content>
+      <div class="container">
+        <div class="profileImage">
+          <pv-image class="profileImage" :src="profileImage" alt="profile Image" width="350" preview />
+        </div>
+        <div class="rentdescription">
+          <div class="titleinformation">
+            <h1>Alquilar vehículo </h1>
+          </div>
+          <div class="containersinformation">
+            <div class="container1information">
+              <div class="categories">
+                <p>Propietario(a):</p>
+                <p>Tipo:</p>
+                <p>Marca:</p>
+                <p>Placa:</p>
+                <p>Color:</p>
+              </div>
+            </div>
+          </div>
+          <div class="button-container">
+            <button @click="handleButtonClick" class="buttonwpp">
+              <p>Contactar</p>
+              <img class="whatsappicon" src="/src/assets/img/whatsappicon.png" alt="WhatsApp" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </template>
+  </pv-card>
+</template>
 <style scoped>
-/* Estilos actuales */
-
-.arrowback {
-  width: 2.5rem;
-  height: 3rem;
-  margin: 2rem 1rem;
-  transform: rotate(180deg);
-}
-
-.buttonwpp {
-  margin: 1rem 1rem 1rem 10%; /* Ajuste del margen izquierdo */
-  background-color: #01C880;
-  color: black;
-  border-radius: 1rem;
-  border: 0.1rem;
-  padding: 0.5rem 1rem;
-}
-
-.whatsappicon {
-  width: 20px;
-  height: 20px;
-  margin-right: 0.5rem; /* Ajuste del margen derecho */
-}
-
-/* Estilos adicionales para mejorar la flexibilidad */
-
-.Rent {
+.card {
+  display: flex;
   justify-content: center;
-  display: flex;
   align-items: center;
-  margin: 0 10%;
+  padding: 1rem;
+  width: 100%;
+  max-width: 1500px;
 }
 
-.containerent {
+.container {
   display: flex;
-  flex-direction: column; /* Cambio a columna para mejor adaptabilidad */
+  justify-content: center;
   align-items: center;
-  color: black;
-  max-width: 100%; /* Hacer el contenedor flexible */
+  padding: 1rem;
+  width: 100%;
+  flex-direction: row; /* Cambia la dirección a fila para que la imagen y la descripción estén lado a lado */
 }
 
-.titleinformation h1 {
-  font-size: 2rem;
-  margin: 2rem 0;
-  text-align: center;
-  color: black;
-}
-
-.containersinformation {
+.button-container {
   display: flex;
-  flex-direction: column; /* Cambio a columna para mejor adaptabilidad */
-  align-items: center;
-  margin: 2rem 0;
+  justify-content: center;
+  width: 100%;
 }
 
-.container1information {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+.rentdescription {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.containerv2information {
+.buttonwpp {
+  background-color: #01C880;
+  color: black;
+  border-radius: 1rem;
+  border: 0.1rem;
+  padding: 0.5rem 1rem;
   display: flex;
-  flex-direction: column; /* Cambio a columna para mejor adaptabilidad */
   align-items: center;
-  margin-top: 5px;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
 }
 
-.margen {
-  list-style: none;
-  margin-top: 8px;
+.profileImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+.rentdescription {
+  flex: 1; /* Esto hace que la imagen y la descripción tengan el mismo ancho */
 }
 
-.margen p {
-  margin-bottom: 21px;
+.whatsappicon {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 0.5rem;
+  }
+
+  .container {
+    flex-direction: column; /* Cambia la dirección a columna para que la imagen y la descripción estén una encima de la otra en pantallas pequeñas */
+  }
+
+  .buttonwpp {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .whatsappicon {
+    width: 15px;
+    height: 15px;
+  }
 }
 </style>
