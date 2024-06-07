@@ -49,7 +49,7 @@ export default {
 
 .container {
 padding: 20px;
-margin: 0 auto;
+margin: -100px auto;
 }
 
 h1 {
@@ -72,6 +72,7 @@ margin-bottom: 20px;
 padding: 15px;
 border-radius: 20px;
 }
+
 .card img {
 border-radius: 20px;
 }

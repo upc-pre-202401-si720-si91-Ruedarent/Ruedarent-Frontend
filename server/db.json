@@ -80,16 +80,6 @@
             "caracteristicas": "Popular, nuevo.",
             "image": "https://i.ibb.co/cNxVqBL/image.png",
             "published": true
-        },
-        
-        {
-            "id": 10,
-            "tipo": "Monopatín",
-            "marca": "JEEP",
-            "modelo": "XXXX",
-            "caracteristicas": "Económica, nuevo.",
-            "image": "https://i.ibb.co/fDWbxv6/image.png",
-            "published": true
         }
     ],
     "usuarios": [

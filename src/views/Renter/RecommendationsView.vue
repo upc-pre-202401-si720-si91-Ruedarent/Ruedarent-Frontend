@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="titlecontainer">Lo más destacado</h2>
+    <h1 class="titlecontainer">Lo más destacado</h1>
   </div>
 
   <div class="card">

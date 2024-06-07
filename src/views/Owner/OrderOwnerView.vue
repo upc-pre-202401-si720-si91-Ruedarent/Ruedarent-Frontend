@@ -56,7 +56,7 @@ export default {
               </div>
 
               </div>
-              <pv-button class="buttonpaypal" label="Pagar" ><p>Pagar</p> <img class="paypalicon" src="../assets/img/paypalicon.png" alt="Paypal" /></pv-button>
+              <pv-button class="buttonpaypal" label="Pagar" ><p>Pagar</p> <img class="paypalicon" src="../../assets/img/paypalicon.png" alt="Paypal" /></pv-button>
 
             </div>
 
@@ -191,14 +191,8 @@ export default {
 
 }
 .titleinformation h1{
-  font-size: 2rem;
-
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 2rem;
   text-align: center;
-  color: black;
 }
 
 .containerv2information{

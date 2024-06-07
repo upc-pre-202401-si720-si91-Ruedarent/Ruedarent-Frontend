@@ -1,10 +1,14 @@
 <script>
-import { obtenerUsuarios } from '@/shared/services/http-common.js';
+import profileImage from "@/assets/img/rentador.png";
+import { obtenerUsuarios } from "@/shared/services/http-common.js";
 
 export default {
+  name: "RentVehicleView",
   data() {
     return {
-      usuarios: []
+      usuarios: [],
+      checked: false,
+      profileImage      
     };
   },
   async created() {
@@ -14,74 +18,141 @@ export default {
 </script>
 
 <template>
-  <div class="contenedor">
-    <div v-if="usuarios.length > 0" class="imagen">
-      <img src="https://i.ibb.co/SP4SsNP/57682dabe58e56826cf84d307efb5495-removebg-preview.png" alt="Tu nombre">
-    </div>
-    <div class="contenedor2">
-      <h1>Mi Perfil</h1>
-      <div class="margen">
-        <div v-if="usuarios.length > 0">
-          <h4>Nombre: {{ usuarios[1].nombre }}</h4>
-          <h4>Vehículos: {{ usuarios[1].Vehículos }}</h4>
-          <h4>Ubicación: {{ usuarios[1].ubicación }}</h4>
-          <h4>Teléfono: {{ usuarios[1].telefono }}</h4>
+  <div class="Rent">
+    <pv-card class="card">
+      <template #content>
+        <div class="containerent">
+          <div class="profileImage">
+            <pv-image :src="profileImage" alt="profile Image" width="350" preview />
+          </div>
+
+          <div class="rentdescription">
+            <div class="titleinformation">
+              <h1>Mi Perfil</h1>
+            </div>
+            <div class="containersinformation">
+              <div class="container1information" v-if="usuarios.length > 0">
+                <div class="categories">
+                  <p>Nombre: {{ usuarios[1].nombre }}</p>
+                  <p>Vehículos: {{ usuarios[1].Vehículos }}</p>
+                  <p>Ubicación: {{ usuarios[1].ubicación }}</p>
+                  <p>Teléfono: {{ usuarios[1].telefono }}</p>
+                </div>
+              </div>
+            </div>
+            <pv-button class="buttonwpp" label="Contactar"><p>Ver más</p></pv-button>
+          </div>
         </div>
-      </div>
-    </div>
+      </template>
+    </pv-card>
   </div>
 </template>
-
 <style scoped>
-img {
-  width: 50%;
-  height: auto;
-  margin: 20px auto;
-}
-
-@media (max-width: 768px) {
-  img {
-    width: 40%;
-    margin: 10px auto;
-  }
-}
-
-.contenedor {
+.Rent {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  margin: 0 10%;
+  margin-bottom: 5%;
+}
+
+.containerent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  max-width: 100%;
+}
+
+.profileImage {
+  margin: 1rem;
+}
+
+.rentdescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+}
+
+.titleinformation h1 {
+  margin: 2rem;
+  text-align: center;
+}
+
+.containersinformation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.container1information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  border: solid;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.buttonwpp {
+  margin: 1rem;
+  background-color: #01C880;
+  color: black;
+  border-radius: 1rem;
+  border: 0.1rem;
+  padding: 0.5rem 1rem;
+}
+
+.buttonwpp:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
-  .contenedor {
+  .Rent {
+    margin: 0 5%;
+  }
+
+  .containerent {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .profileImage,
+  .rentdescription {
+    margin: 0.5rem;
+  }
+
+  .container1information {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .buttonwpp {
     margin-left: 0;
   }
 }
 
-.contenedor2 {
-  display: grid;
-  grid-template-columns: repeat(1, 2fr);
-}
+@media (min-width: 769px) {
+  .containerent {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 
-.margen {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin-top: 8px;
-}
+  .rentdescription {
+    text-align: left;
+    align-items: flex-start;
+  }
 
-.margen h4 {
-  margin-bottom: 21px;
-}
-
-button[type="submit"] {
-  background-color: #34D399;
-  color: white;
-  padding: 8px 8px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  .buttonwpp {
+    align-self: flex-start;
+  }
 }
 </style>
