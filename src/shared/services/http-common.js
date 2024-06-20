@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Cambia esta URL por la URL de tu API en Mocky.io
-const API_BASE_URL = 'https://run.mocky.io/v3/be8f67e4-5590-40d7-87a8-2ff367d4d5a3';
+const API_BASE_URL = 'https://run.mocky.io/v3/675dd1f7-0fa2-4c27-8f46-56be662a2b55';
 
 const http = axios.create({
   baseURL: API_BASE_URL,
